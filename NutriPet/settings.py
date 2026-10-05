@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'recomendador',  # APP REGISTRADA
     'rest_framework',
     'rest_framework.authtoken', #para el bloque 7
-    'core',
 ]
 
 MIDDLEWARE = [
