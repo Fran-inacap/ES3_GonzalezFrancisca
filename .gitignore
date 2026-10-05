@@ -15,3 +15,6 @@ __pycache__/
 
 # Base de datos SQLite por defecto de Django (si aplica)
 *.sqlite3
+
+# Notas personales de evaluación
+eva_3.md
