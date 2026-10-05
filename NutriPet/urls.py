@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect
 from rest_framework.routers import DefaultRouter
 from recomendador import views
 from .api_views import RecomendacionViewSet
@@ -24,6 +25,7 @@ router = DefaultRouter()
 router.register(r'recomendaciones', RecomendacionViewSet, basename='recomendacion')
 
 urlpatterns = [
+    path('', lambda request: redirect('login'), name='index'),  # Redirección en la raíz
     path('admin/', admin.site.urls),
     path('login/', views.vista_login, name='login'),
     path('logout/', views.vista_logout, name='logout'),
