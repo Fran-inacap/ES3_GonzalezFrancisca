@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'recomendador',  # APP REGISTRADA
     'rest_framework',
     'rest_framework.authtoken', #para el bloque 7
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,13 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 
         'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'NutriPet API',
+    'DESCRIPTION': 'API de recomendaciones alimenticias para mascotas.',
+    'VERSION': '1.0.0',
 }
 
 ROOT_URLCONF = 'NutriPet.urls'
