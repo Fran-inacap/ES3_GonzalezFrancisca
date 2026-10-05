@@ -3,7 +3,7 @@ from rest_framework import viewsets
 from .models import RecomendacionAlimenticia
 from .serializers import RecomendacionSerializer
 from .permissions import SoloStaffBorra
-from .solucion import calcular_recomendacion # Tu regla de negocio
+from .solucion import calcular_recomendacion # Regla de negocio
 
 class RecomendacionViewSet(viewsets.ModelViewSet):
     queryset = RecomendacionAlimenticia.objects.all().order_by("-creado")
